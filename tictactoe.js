@@ -76,8 +76,11 @@ class Board {
 }
 
 
-// const board = new Board(['x','o','','x','o','','o','','x']);
-// board.printFormattedBoard();
-// console.log(board.insert('x',2));
-// board.printFormattedBoard();
-// console.log(board.getAvailableMoves());
+const board = new Board(['x','o','o','x','o','','o','x','x']);
+board.printFormattedBoard();
+console.log(board.insert('x',2));
+board.printFormattedBoard();
+console.log(board.getAvailableMoves());
+if(board.isTerminal()) {
+    console.log(typeof(board.isTerminal().winner))
+}
